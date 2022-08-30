@@ -1,0 +1,27 @@
+--- E:/Users/Eric/OneDrive - Cégep Limoilou/svn/Cours/420-EBB POO 2/VisualStudio/BatailleNavaleWPF_4.3/BatailleNavaleWPF/Matrice2D_4.2.cs	jeu. juin 17 10:36:05 2021
++++ E:/Users/Eric/OneDrive - Cégep Limoilou/svn/Cours/420-EBB POO 2/VisualStudio/BatailleNavaleWPF_4.3/BatailleNavaleWPF/Matrice2D.cs	lun. juin 28 13:49:39 2021
+@@ -12 +12 @@ namespace BatailleNavale
+-        private Case[][] Matrice { get; }
++        private Case[,] Matrice { get; }
+@@ -15 +15 @@ namespace BatailleNavale
+-        public int NbLignes { get => Matrice.Length; }
++        public int NbLignes { get => Matrice.GetLength(0); }
+@@ -18 +18 @@ namespace BatailleNavale
+-        public int NbColonnes { get => Matrice[0].Length; }
++        public int NbColonnes { get => Matrice.GetLength(1); }
+@@ -32,2 +32,2 @@ namespace BatailleNavale
+-                Matrice = new Case[lignes][];
+-                for (int i = 0; i < Matrice.Length; i++)
++                Matrice = new Case[lignes, colonnes];
++                for (int i = 0; i < lignes; i++)
+@@ -35 +34,0 @@ namespace BatailleNavale
+-                    Matrice[i] = new Case[colonnes];
+@@ -38 +37 @@ namespace BatailleNavale
+-                        Matrice[i][j] = null;
++                        Matrice[i,j] = null;
+@@ -59 +58 @@ namespace BatailleNavale
+-                return Matrice[i - IndexDepart][j - IndexDepart];
++                return Matrice[i - IndexDepart, j - IndexDepart];
+@@ -78 +77 @@ namespace BatailleNavale
+-                Matrice[i - IndexDepart][j - IndexDepart] = carre;
++                Matrice[i - IndexDepart, j - IndexDepart] = carre;
