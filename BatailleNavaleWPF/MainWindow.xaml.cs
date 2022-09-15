@@ -23,6 +23,7 @@ namespace BatailleNavaleWPF
     {
         public MainWindow()
         {
+            // Initialisation des composantes
             InitializeComponent();
 
             GrilleTB.Text = new Grille().ToString();
