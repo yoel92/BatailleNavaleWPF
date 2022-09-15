@@ -26,6 +26,7 @@ namespace BatailleNavaleWPF
             // Initialisation des composantes
             InitializeComponent();
 
+            // Crée la grille
             GrilleTB.Text = new Grille().ToString();
         }
     }
